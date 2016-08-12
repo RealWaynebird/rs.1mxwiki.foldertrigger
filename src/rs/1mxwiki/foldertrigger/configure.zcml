@@ -37,5 +37,10 @@
      for="plone.app.contenttypes.interfaces.IFolder
           zope.lifecycleevent.interfaces.IObjectAddedEvent"
      handler=".events.notifyFolderIsAdded" />
+  <subscriber
+     for="plone.app.contenttypes.interfaces.IDocument
+          zope.lifecycleevent.interfaces.IObjectAddedEvent"
+     handler=".events.notifyDocumemtIsAdded" />
+
 
 </configure>
