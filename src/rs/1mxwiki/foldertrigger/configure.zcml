@@ -40,7 +40,7 @@
   <subscriber
      for="plone.app.contenttypes.interfaces.IDocument
           zope.lifecycleevent.interfaces.IObjectAddedEvent"
-     handler=".events.notifyDocumemtIsAdded" />
+     handler=".events.notifyDocumentIsAdded" />
 
 
 </configure>
