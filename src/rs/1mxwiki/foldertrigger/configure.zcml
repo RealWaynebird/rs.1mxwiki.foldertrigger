@@ -45,7 +45,7 @@
 
   <subscriber
      for="collective.timedevents.interfaces.IIntervalTicks15Event"
-     handlerr="collective.autopublishing.eventhandler.autopublish_handler" />
+     handler="collective.autopublishing.eventhandler.autopublish_handler" />
 
 
 </configure>
