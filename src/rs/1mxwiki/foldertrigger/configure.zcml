@@ -44,8 +44,8 @@
      handler=".events.notifyDocumentIsAdded" />
 
   <subscriber
-     handler="collective.timedevents.interfaces.IIntervalTick15Event"
-     for="collective.autopublishing.eventhandler.autopublish_handler" />
+     for="collective.timedevents.interfaces.IIntervalTick15Event"
+     handlerr="collective.autopublishing.eventhandler.autopublish_handler" />
 
 
 </configure>
