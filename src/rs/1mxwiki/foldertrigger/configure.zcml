@@ -43,5 +43,9 @@
           zope.lifecycleevent.interfaces.IObjectAddedEvent"
      handler=".events.notifyDocumentIsAdded" />
 
+  <subscriber
+     for="plone.app.contenttypes.interfaces.IDocument
+          Products.DCWorkflow.interfaces.IAfterTransitionEvent"
+     handler=".events.checkInIfNeeded" />
 
 </configure>
