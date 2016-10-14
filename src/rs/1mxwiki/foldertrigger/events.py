@@ -12,9 +12,12 @@ def notifyFolderIsAdded(folder, event):
     folder.REQUEST.RESPONSE.redirect(folder.absolute_url() + "/++add++Document") 
 
 def notifyDocumentIsAdded(document, event):
-    folder = aq_parent(aq_inner(document))
-    #if not IWorkingCopy.providedBy(aq_inner(document)):
-    #   folder.setDefaultPage(getattr(document,"id"))
+    context = aq_inner(document)
+    folder = aq_parent(context)
+    if IWorkingCopy.providedBy(context):
+       return
+    else:
+       folder.setDefaultPage(getattr(document,"id"))
 
 def checkInIfNeeded(document, event):
     context = aq_inner(document)
