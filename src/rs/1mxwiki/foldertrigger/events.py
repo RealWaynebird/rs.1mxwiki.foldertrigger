@@ -13,7 +13,7 @@ def notifyFolderIsAdded(folder, event):
 
 def notifyDocumentIsAdded(document, event):
     folder = aq_parent(aq_inner(document))
-    if not IWorkingCopy.providedBy(aq_inner(context)):
+    if not IWorkingCopy.providedBy(aq_inner(document)):
        folder.setDefaultPage(getattr(document,"id"))
 
 def checkInIfNeeded(document, event):
