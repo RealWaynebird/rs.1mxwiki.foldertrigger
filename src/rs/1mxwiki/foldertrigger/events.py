@@ -16,8 +16,8 @@ def notifyDocumentIsAdded(document, event):
     folder = aq_parent(context)
     if IWorkingCopy.providedBy(context):
        return
-    else:
-       folder.setDefaultPage(getattr(document,"id"))
+    #else:
+    #   folder.setDefaultPage(getattr(document,"id"))
 
 def checkInIfNeeded(document, event):
     context = aq_inner(document)
